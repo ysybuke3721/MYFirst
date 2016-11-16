@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <View
+        android:id="@+id/alpha"
+        android:background="@android:color/black"
+        android:alpha="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_right"
+        android:layout_marginRight="@dimen/margin_right"
+        android:background="@drawable/shape_bt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="请选择支付方式"
+            android:textSize="@dimen/first_title_tv_size"
+            android:textColor="@color/backGroundColor" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line"/>
+
+        <TextView
+            android:id="@+id/tv_aliy_pay"
+            android:padding="15dp"
+            android:text="支付宝支付"
+            android:textSize="@dimen/text1"
+            android:gravity="center"
+            android:textColor="@color/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"/>
+        <TextView
+            android:id="@+id/tv_weixin_pay"
+            android:text="微信支付"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="@dimen/text1"
+            android:textColor="@color/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</FrameLayout>

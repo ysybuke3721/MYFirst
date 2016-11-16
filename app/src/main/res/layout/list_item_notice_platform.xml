@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    android:background="@color/color4">
+
+    <LinearLayout
+        android:paddingRight="@dimen/row_top"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notice_platform_name_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="佣金:"
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/notice_platform_name_t"
+                android:id="@+id/notice_platform_name"
+                android:textColor="@color/bt_red"
+                android:textSize="@dimen/text2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notice_platform_time"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间:"
+                android:layout_toLeftOf="@id/notice_platform_time"
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text5"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/row_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notice_platform_content"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text4"
+            android:lines="2"/>
+    </LinearLayout>
+
+</LinearLayout>

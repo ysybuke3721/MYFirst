@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <include layout="@layout/layout_titlebar" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color4">
+
+        <EditText
+            android:id="@+id/adress_add_name"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="收货人姓名"
+            android:textColorHint="@color/text3"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2"/>
+
+        <EditText
+            android:id="@+id/adress_add_area"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="城市区域"
+            android:textColorHint="@color/text3"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2"/>
+        <EditText
+            android:id="@+id/adress_add_detail"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="详细地址"
+            android:textColorHint="@color/text3"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2"/>
+        <EditText
+            android:id="@+id/adress_add_phone"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="联系电话"
+            android:inputType="number"
+            android:textColorHint="@color/text3"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/padding"
+        android:padding="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否设为常用地址"
+            android:textSize="@dimen/text1"
+            android:textColor="@color/text1"/>
+
+        <CheckBox
+            android:id="@+id/adress_add_default_select"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/checkbutton_selector"
+            android:button="@null"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/vMasker"
+        android:visibility="gone"
+        android:background="#e0000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <CheckBox
+        android:id="@+id/ivCheckGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_chose_to_pay"/>
+
+    <ImageView
+
+        android:id="@+id/ivGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:layout_toRightOf="@+id/ivCheckGroup"
+        />
+
+    <TextView
+        android:id="@+id/tvShopNameGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/ivGroup"
+        android:text=""
+        android:textColor="#003333"
+        android:textSize="@dimen/text3"/>
+
+    <!--<ImageView
+        android:id="@+id/ivShopArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tvShopNameGroup"
+        android:background="@mipmap/drop_iv"/>-->
+
+   <!-- <View
+        android:id="@+id/imageView"
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tvEdit"
+        android:background="#cccccc"/>
+
+    <TextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/shopping_editor"
+        android:textColor="#003333"
+        android:textSize="12sp"/>-->
+
+</RelativeLayout>

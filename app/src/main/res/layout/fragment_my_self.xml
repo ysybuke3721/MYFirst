@@ -1,0 +1,406 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.slr.slrapp.fragments.MySelfFragment">
+
+    <!-- 我的界面的标题栏 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/my_me"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_info"
+                >
+
+                <ImageView
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/fanhui"/>
+
+                <com.slr.slrapp.widget.CircleImageView
+                    android:layout_centerHorizontal="true"
+                    app:border_width="2dp"
+                    app:border_color="@color/color4"
+                    android:id="@+id/my_face"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_width="@dimen/my_face"
+                    android:layout_height="@dimen/my_face"/>
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/my_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/my_name"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/my_name"
+                    android:gravity="bottom"
+                    android:drawablePadding="@dimen/padding"
+                    android:drawableLeft="@mipmap/jimaobi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/my_introduction"
+                    android:textColor="@color/color4"
+                    android:layout_marginTop="@dimen/padding"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/row_top"
+                android:background="@color/color4"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/my_collection"
+                    android:padding="@dimen/padding"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/my_collection_num"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="0"/>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/padding"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="我的收藏"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="@dimen/padding"
+                    android:layout_marginBottom="@dimen/padding"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line"/>
+
+                <LinearLayout
+                    android:id="@+id/my_message"
+                    android:padding="@dimen/padding"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/my_message_num"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="0"/>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/padding"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="我的消息"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/row_top"
+                android:background="@color/color4"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding" >
+
+                <RelativeLayout
+                    android:id="@+id/my_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:background="@color/color4" >
+
+                    <TextView
+                        android:drawableLeft="@mipmap/my_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="4dp"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_order" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/drop_iv" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4">
+
+                <View
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_margin"
+                    android:background="@color/line"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding" >
+
+                <RelativeLayout
+                    android:id="@+id/my_distributors"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:background="@color/color4" >
+
+                    <TextView
+                        android:drawableLeft="@mipmap/my_distributors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="4dp"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_distributors" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/drop_iv" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4">
+
+                <View
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_margin"
+                    android:background="@color/line"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding" >
+
+                <RelativeLayout
+                    android:id="@+id/my_evaluation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:background="@color/color4" >
+
+                    <TextView
+                        android:drawableLeft="@mipmap/my_evaluation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="4dp"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_evaluation" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/drop_iv" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4">
+
+                <View
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_margin"
+                    android:background="@color/line"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/row_margin"
+                android:background="@color/color4"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding" >
+
+                <RelativeLayout
+                    android:id="@+id/my_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:background="@color/color4" >
+
+                    <TextView
+                        android:drawableLeft="@mipmap/my_wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="4dp"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_wallet" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/drop_iv" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4">
+
+                <View
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_margin"
+                    android:background="@color/line"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding" >
+
+                <RelativeLayout
+                    android:id="@+id/my_invite_friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:background="@color/color4" >
+
+                    <TextView
+                        android:drawableLeft="@mipmap/invite_friends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="4dp"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_invite_friends" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/drop_iv" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4">
+
+                <View
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_margin"
+                    android:background="@color/line"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding" >
+
+                <RelativeLayout
+                    android:id="@+id/my_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_height"
+                    android:background="@color/color4" >
+
+                    <TextView
+                        android:drawableLeft="@mipmap/more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="4dp"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_more" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/drop_iv" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/row_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color4">
+
+                <View
+                    android:layout_marginLeft="@dimen/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/row_margin"
+                    android:background="@color/line"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

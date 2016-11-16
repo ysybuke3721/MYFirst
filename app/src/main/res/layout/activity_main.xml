@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activitys.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_margin"
+        android:background="@color/line"/>
+
+    <RadioGroup
+        android:background="@color/color4"
+        android:id="@+id/tab_menu"
+        style="@style/Layout_M_W"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bottom_btn_first"
+            style="@style/bottom_btn_style"
+            android:drawableTop="@drawable/tab_selector_btn_firstpage"
+            android:text="@string/bottom_btn_1"
+           />
+
+        <RadioButton
+            android:id="@+id/bottom_btn_bussniss"
+            style="@style/bottom_btn_style"
+            android:drawableTop="@drawable/tab_selector_btn_farmer"
+            android:text="@string/bottom_btn_2" />
+
+        <RadioButton
+            android:id="@+id/bottom_btn_shopcar"
+            style="@style/bottom_btn_style"
+            android:drawableTop="@drawable/tab_selector_btn_shoppingcar"
+            android:text="@string/bottom_btn_3" />
+
+        <RadioButton
+            android:id="@+id/bottom_btn_me"
+            style="@style/bottom_btn_style"
+            android:drawableTop="@drawable/tab_selector_btn_myself"
+            android:text="@string/bottom_btn_4" />
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_evaluations"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding"
+    android:background="@color/color4">
+
+    <ImageView
+        android:id="@+id/my_evaluations_icon_iv"
+        android:layout_width="@dimen/my_face"
+        android:layout_height="@dimen/my_face"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/my_evaluation_ll"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_toRightOf="@id/my_evaluations_icon_iv"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/my_evaluations_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text2"
+            android:textColor="@color/bt_red"/>
+
+        <TextView
+            android:layout_marginLeft="@dimen/padding"
+            android:id="@+id/my_evaluations_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text3"
+            android:textColor="@color/text1"/>
+    </LinearLayout>
+
+    <TextView
+        android:textSize="@dimen/text4"
+        android:textColor="@color/text1"
+        android:id="@+id/my_evaluation_content"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_below="@id/my_evaluation_ll"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_toRightOf="@id/my_evaluations_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"/>
+
+    <TextView
+        android:id="@+id/my_evaluation_date"
+        android:textSize="@dimen/text4"
+        android:textColor="@color/text2"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_below="@id/my_evaluation_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_toRightOf="@id/my_evaluations_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

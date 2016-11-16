@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    >
+
+    <include layout="@layout/layout_titlebar"/>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:id="@+id/about_myself_ewm"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@mipmap/home"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="河南山里人网络科技有限公司"
+        android:textColor="@color/text2"
+        android:textSize="@dimen/text1"/>
+
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="       本公司成立于2016年，是一家将的互联网技术与纯生态的农副产品相结合的创新型公司，一个年轻富有活力的专业电商平台。本平台提供绿色原生态产品，以“一切源于自然”为宗旨，主营原生土养产品。以直播监视、快捷提货、安全支付等服务，让您放心、便捷地享受绿色健康。 对于消费者而言，饮食健康是最重要的问题，有很多人无法购买到真正纯天然的绿色健康鸡鸭鹅猪鱼，家禽家畜(全部在山上放养，不喂任何饲料添加剂）。对于山（农）村养殖户来说，销路在何方是一重大难题。本平台，既考虑到了顾客这种顾虑，又解决了生态养殖销路问题，现诚邀广大有识之士加盟，共同致力于生态养殖产业的发展。"
+        android:textColor="@color/text2"
+        android:textSize="@dimen/text2"/>
+
+</LinearLayout>

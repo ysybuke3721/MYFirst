@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0d2bd1</color>
+    <color name="colorPrimaryDark">#669933</color>
+    <color name="colorAccent">#a77284</color>
+    <color name="text_checked">#8CB06E</color>
+    <color name="text_unchecked">#C5C5C5</color>
+    <color name="title_bg">#669933</color>
+    <color name="color1">#111</color>
+    <color name="color2">#888</color>
+    <color name="color3">#aaa</color>
+    <color name="color4">#fff</color>
+
+    <color name="transport">#00000000</color>
+
+    <color name="backGroundColor">#669933</color>
+    <color name="bt_red">#df3d3e</color>
+    <color name="line">#e1e1e1</color>
+    <color name="background">#fafafa</color>
+    
+    <color name="add_sub_bg">#959595</color>
+
+    <color name="golden">#ffcc33</color>
+
+    <color name="order_farm_bg">#F5F5F5</color>
+
+    <color name="text1">#232323</color>
+    <color name="text2">#494949</color>
+    <color name="text3">#b3b3b3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="light_blue">#6593cb</color>
+    <color name="color0">#3e3939</color>
+
+    <color name="black_p50">#7f000000</color>
+    <color name="gray_e7e7e7">#e7e7e7</color>
+    <color name="b_c_fafafa">#fafafa</color>
+    <color name="blue_4285f4">#4285f4</color>
+    <color name="black_5a626d">#5a626d</color>
+    
+    <color name="login_bg">#c3f6d3</color>
+    <color name="divider">#999</color>
+
+
+    <color name="back_to_home">#9E9A97</color>
+
+
+    <color name="comment_divider">#cccccc</color>
+
+    <!--微信支付用-->
+
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+
+
+
+
+</resources>

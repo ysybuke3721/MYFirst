@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color4"
+    android:id="@+id/rl_address"
+    android:padding="@dimen/padding">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/adress_add_name"
+        android:textColor="@color/text1"
+        android:textSize="@dimen/text2" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/marginTop"
+        android:layout_toRightOf="@id/adress_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/adress_add_phone"
+        android:textColor="@color/text1"
+        android:textSize="@dimen/text2" />
+
+    <TextView
+        android:layout_marginTop="@dimen/padding"
+        android:layout_below="@id/adress_add_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/adress_add_adress"
+        android:textColor="@color/text2"
+        android:textSize="@dimen/text3" />
+    <View
+        android:layout_marginTop="@dimen/padding"
+        android:layout_below="@id/adress_add_adress"
+        android:id="@+id/adress_add_line"
+        android:background="@color/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_margin"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_below="@id/adress_add_line">
+
+        <CheckBox
+            android:layout_centerVertical="true"
+            android:id="@+id/adress_add_adress_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/checkbox_selector"
+            android:button="@null"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text3"
+            android:textColor="@color/text2"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设为默认"
+            android:layout_toRightOf="@id/adress_add_adress_cb"/>
+
+        <Button
+            android:layout_centerVertical="true"
+            android:text="编辑"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text3"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/shape_bt1"
+            android:id="@+id/adress_add_adress_editor"
+            android:layout_width="60dp"
+            android:layout_height="30dp" />
+
+        <Button
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_toLeftOf="@id/adress_add_adress_editor"
+            android:text="删除"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text3"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/shape_bt1"
+            android:id="@+id/adress_add_adress_delete"
+            android:layout_width="60dp"
+            android:layout_height="30dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include layout="@layout/layout_titlebar"/>
+
+   <RelativeLayout
+       android:background="@color/color4"
+       android:layout_marginTop="@dimen/padding"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="@dimen/marginTop">
+
+       <TextView
+           android:layout_centerHorizontal="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/text2"
+           android:text="我的佣金"
+           android:textSize="@dimen/text3"
+           android:id="@+id/my_distrivutors_tv"/>
+
+       <TextView
+           android:layout_marginTop="@dimen/padding"
+           android:layout_below="@id/my_distrivutors_tv"
+           android:layout_centerHorizontal="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/text1"
+           android:text="¥0.00"
+           android:textSize="30dp"
+           android:id="@+id/my_distrivutors_money"/>
+   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/my_distrivutors_tv1"
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="您消费336元后，可自动开通分销商服务，获取大量佣金提成哦！"/>
+
+        <com.slr.slrapp.widget.TabPageIndicator
+            android:id="@+id/my_distributors_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            />
+
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@id/my_distributors_indicator"
+            android:id="@+id/my_distributors_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" />
+
+    </RelativeLayout>
+
+</LinearLayout>

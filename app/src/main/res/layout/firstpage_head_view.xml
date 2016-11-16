@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/first_fl_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/first_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewpager_height"></android.support.v4.view.ViewPager>
+
+
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/tv_belowViewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_pager_top"
+        android:textSize="@dimen/text2"
+        android:gravity="center"
+        android:textColor="@color/text2"
+        android:text=""/>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_height_under_pager"
+        android:layout_marginTop="@dimen/dot_margin_pager_top"
+        android:gravity="center_vertical"
+       >
+
+        <LinearLayout
+            android:id="@+id/little_points"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:gravity="end|bottom"
+            android:orientation="horizontal"
+            android:padding="9dp">
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+</FrameLayout>

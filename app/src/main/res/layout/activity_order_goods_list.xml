@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.slr.slrapp.activitys.OrderGoodsListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_title_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/back_padding"
+            android:src="@mipmap/back_map" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/goods_list"
+            android:textSize="@dimen/text1"
+            android:textColor="@color/text1"
+            />
+
+        <TextView
+            android:id="@+id/tv_goods_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共  件"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2"
+            android:layout_gravity="center"
+            android:padding="@dimen/dots_to_right" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv_goods_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>

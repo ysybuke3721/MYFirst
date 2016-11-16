@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.slr.slrapp.activitys.ShopCarActivity">
+    <!-- 在养殖场直播页面点击购物车图标后进入的页面，和购物车fragment界面一样-->
+    <RelativeLayout
+        android:id="@+id/shopping_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height"
+        android:background="@color/backGroundColor">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/back_padding"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/bottom_btn_3"
+            android:textColor="@color/color4"
+            android:textSize="@dimen/text1" />
+
+       <!-- <TextView
+            android:id="@+id/shopping_car_switch_bt"
+            android:layout_width="@dimen/activity_title_width_bt"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textColor="@color/color4"
+            android:textSize="@dimen/activity_title_bt" />-->
+
+    </RelativeLayout>
+
+    <!-- 购物车界面的结算 -->
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/shopping_car_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color4">
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:id="@+id/ll_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="合计："
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tv_pay_margin_top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shopping_car_paynum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="¥0.00"
+                    android:textColor="@color/bt_red"
+                    android:textSize="@dimen/text3" />
+
+                <TextView
+                    android:id="@+id/tv_include_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_total_price"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/not_include_mail"
+                    android:textSize="@dimen/text5" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/shopping_car_bt_pay"
+            android:layout_width="@dimen/activity_title_width_bt"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_go_to_pay"
+            android:gravity="center"
+            android:text="@string/shopping_pay"
+            android:textColor="@color/color4"
+            android:textSize="@dimen/activity_title_bt" />
+
+        <CheckBox
+            android:id="@+id/shopping_car_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_right"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_chose_to_pay"
+            android:drawablePadding="@dimen/text_pading_img"
+            android:gravity="center"
+            android:text="全选"
+            android:textColor="@color/line"
+            android:textSize="@dimen/activity_title_bt" />
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/shopping_car_pay"
+        android:layout_below="@id/shopping_title"
+        android:clickable="true">
+
+        <ExpandableListView
+            android:id="@+id/shopping_car_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:childDivider="@color/line"
+            android:divider="@color/line"
+            android:dividerHeight="@dimen/dividerHeight"
+            android:groupIndicator="@null">
+
+        </ExpandableListView>
+    </FrameLayout>
+
+</RelativeLayout>

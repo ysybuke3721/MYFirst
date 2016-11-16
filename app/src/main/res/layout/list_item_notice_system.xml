@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/notice_system_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text3"
+        android:textSize="@dimen/text3"/>
+
+    <RelativeLayout
+        android:id="@+id/notice_system_item"
+        android:layout_margin="@dimen/padding"
+        android:padding="@dimen/padding"
+        android:background="@drawable/shape_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="@dimen/padding"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/notice_system_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2"/>
+
+        <TextView
+            android:layout_below="@id/notice_system_name"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/notice_system_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text3"
+            android:textSize="@dimen/text4"/>
+
+        <TextView
+            android:layout_below="@id/notice_system_item_time"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/notice_system_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text3"
+            android:lines="2"/>
+        <View
+            android:id="@+id/notice_system_item_view"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_below="@id/notice_system_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+        <TextView
+            android:drawablePadding="@dimen/padding"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/notice_system_item_view"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看详情"
+            android:textColor="@color/text3"
+            android:textSize="@dimen/text3"
+            android:drawableRight="@mipmap/drop_iv"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

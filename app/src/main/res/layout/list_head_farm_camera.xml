@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:text="直播"
+        android:textColor="@color/text_checked"
+        android:textSize="@dimen/text1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/title_bg" />
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/layout_padding"
+    android:layout_height="250dp">
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transport"
+        android:orientation="vertical">
+
+        <com.slr.slrapp.widget.NEVideoView
+            android:id="@+id/video_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <RelativeLayout
+        android:background="@color/transport"
+        android:id="@+id/rl_prepare"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_tishi"
+            android:text="直播正在加载中……"
+          android:layout_below="@+id/pb"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_padding"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/layout_padding">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text2" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="@style/myRatingBarBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:isIndicator="true"
+                android:max="5"
+                android:rating="2"
+                android:stepSize="0.5" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_if_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/shoucang" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_pading_img"
+                android:text="@string/collect"
+                android:textColor="@color/text2"
+                android:textSize="@dimen/text2" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_farm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+        <TextView
+            android:id="@+id/tgv_farm_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:text=""
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/layout_padding"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_leave_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/layout_padding"
+            android:layout_weight="1"
+            android:background="@drawable/bg_leave_message"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/text_padding"
+            android:hint="留言"
+            android:maxLength="100"
+            android:maxLines="3"
+            android:paddingBottom="@dimen/text_padding"
+            android:paddingTop="@dimen/text_padding"
+            android:textColor="@color/text1"
+            android:textColorHint="@color/text3" />
+
+        <TextView
+            android:id="@+id/tv_leave_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_padding"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:background="@drawable/shape_bt2"
+            android:gravity="center_vertical"
+            android:padding="@dimen/text_padding"
+            android:text="留言"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text2" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

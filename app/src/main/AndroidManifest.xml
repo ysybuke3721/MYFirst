@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.slr.slrapp">
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序使用PowerManager WakeLocks以防止处理器休眠或者屏幕锁屏 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许程序向外部存储设备写数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序向外部存储设备读数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络相关信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序获取Wifi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序获得设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 允许应用调用系统相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许应用调用系统电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 友盟分享 -->
+    <!-- renren sso Permission for Unit Test -->
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- *************************    related to Share START **************************** -->
+        <!-- Share edit page -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <!-- Sina -->
+        <activity
+            android:name=".wbapi.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- wechat callback -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+
+        </activity>
+
+
+        <activity android:name=".wxapi.WXPayEntryActivity"   android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wx70997146974e950c"/>
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- tencent -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105577374" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="false" />
+        <uses-library android:name="android.test.runner" />
+        <!-- *************************     related to Share END **************************** -->
+        <!-- umengAppKey，replace to yours -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="577f77ac67e58e272e00029d" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" />
+
+        <!--<service-->
+            <!--android:name="com.sina.weibo.sdk.net.DownloadService"-->
+            <!--android:exported="false" />-->
+
+        <!-- 百度地图配置 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="dO25UHcLbiztWvIndOU5W9NgdllLIGHp" />
+
+        <activity
+            android:name=".activitys.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".activitys.WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activitys.WebViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.FeedBackActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.GetMoneyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyOrderDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.AboutMyselfActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.UserInfoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyMessageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyDistributorsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyEvalutaionsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyCollectionActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyOrderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.NoticeLogisticesActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.NoticePlatformActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.NoticeSystemActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.BaiDuLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.CityLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- 百度地图定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity android:name=".activitys.MyFriendsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyMoreActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyWalletActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.AdressAddActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.AdressEditActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyAdressAddActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.GoodsDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.SearchMoreActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activitys.FarmCameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden|"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activitys.OrderDetailsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.PaySuccessActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.ShopCarActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.GoToCommentActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activitys.MyLoginActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MyRegisterActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.FindMyPasswordActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activitys.MutilOrderActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.OrderGoodsListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.LeaderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activitys.FullScreenVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activitys.FarmerActivity"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

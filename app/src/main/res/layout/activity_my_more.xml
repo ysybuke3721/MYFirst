@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <include layout="@layout/layout_titlebar"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+
+    <!-- 关于我们 -->
+
+    <RelativeLayout
+        android:onClick="onClick"
+        android:id="@+id/more_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4"
+        android:orientation="horizontal"
+        android:padding="@dimen/morePadding">
+
+        <TextView
+            android:textSize="@dimen/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="关于我们"
+            android:textColor="@color/text1" />
+
+        <ImageView
+            android:id="@+id/more_about_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/drop_iv" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+
+    <!-- 联系客服 -->
+
+    <RelativeLayout
+        android:onClick="onClick"
+        android:id="@+id/more_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4"
+        android:orientation="horizontal"
+        android:padding="@dimen/morePadding">
+
+        <TextView
+            android:textSize="@dimen/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="联系客服"
+            android:textColor="@color/text1" />
+
+        <ImageView
+            android:id="@+id/more_service_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/drop_iv" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+    <!-- 反馈 -->
+
+    <RelativeLayout
+        android:onClick="onClick"
+        android:id="@+id/more_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4"
+        android:orientation="horizontal"
+        android:padding="@dimen/morePadding">
+
+        <TextView
+            android:textSize="@dimen/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="反馈"
+            android:textColor="@color/text1" />
+
+        <ImageView
+            android:id="@+id/more_help_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/drop_iv" />
+
+    </RelativeLayout>
+
+
+
+    <!-- 清除缓存 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:onClick="onClick"
+        android:id="@+id/more_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4"
+        android:orientation="horizontal"
+        android:padding="@dimen/morePadding">
+
+        <TextView
+            android:textSize="@dimen/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="清除缓存"
+            android:textColor="@color/text1" />
+
+        <ImageView
+            android:id="@+id/more_clear_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/drop_iv" />
+
+        <TextView
+            android:id="@+id/more_clear_iv"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/more_clear_iv1"
+            android:layout_centerVertical="true"
+            android:text="0.00K"
+            android:textSize="@dimen/text3"
+            android:textColor="@color/text2"/>
+    </RelativeLayout>
+
+
+    <!-- 检查更新 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:onClick="onClick"
+        android:id="@+id/more_check_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4"
+        android:orientation="horizontal"
+        android:padding="@dimen/morePadding">
+
+        <TextView
+            android:textSize="@dimen/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="检查更新"
+            android:textColor="@color/text1" />
+
+        <ImageView
+            android:id="@+id/more_check_update_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/drop_iv" />
+
+        <TextView
+            android:id="@+id/more_check_update_tv"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/more_check_update_iv1"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/text3"
+            android:textColor="@color/text2"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+    <!-- 安全退出 -->
+
+    <RelativeLayout
+        android:onClick="onClick"
+        android:id="@+id/more_esc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color4"
+        android:orientation="horizontal"
+        android:padding="@dimen/morePadding">
+
+        <TextView
+            android:textSize="@dimen/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="退出账号"
+            android:textColor="@color/text1" />
+
+        <ImageView
+            android:id="@+id/more_esc_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/drop_iv" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color4">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_margin"
+            android:background="@color/line"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

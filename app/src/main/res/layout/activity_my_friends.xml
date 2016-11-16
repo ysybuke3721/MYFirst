@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_titlebar"/>
+
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:id="@+id/my_friends_ewm"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@mipmap/app"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="直接扫描二维码邀请好友安装"
+        android:textColor="@color/text1"
+        android:textSize="@dimen/text5"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/my_fridends_qqkj"
+            android:gravity="center"
+            android:drawablePadding="@dimen/padding"
+            android:drawableTop="@mipmap/kongjian"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QQ空间"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text5"/>
+        <TextView
+            android:id="@+id/my_fridends_pyq"
+            android:gravity="center"
+            android:drawablePadding="@dimen/padding"
+            android:drawableTop="@mipmap/pengyouquan"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="朋友圈"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text5"/>
+        <TextView
+            android:id="@+id/my_fridends_qqhy"
+            android:gravity="center"
+            android:drawablePadding="@dimen/padding"
+            android:drawableTop="@mipmap/qqhaoyou"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QQ好友"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text5"/>
+        <TextView
+            android:id="@+id/my_fridends_wxhy"
+            android:gravity="center"
+            android:drawablePadding="@dimen/padding"
+            android:drawableTop="@mipmap/weixinhaoyou"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="微信好友"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text5"/>
+        <TextView
+            android:id="@+id/my_fridends_xlwb"
+            android:gravity="center"
+            android:drawablePadding="@dimen/padding"
+            android:drawableTop="@mipmap/weibo"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="新浪微博"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text5"/>
+
+    </LinearLayout>
+
+</LinearLayout>

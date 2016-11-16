@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:qinc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/alpha_view"
+        android:layout_weight="1"
+        android:background="@android:color/black"
+        android:alpha="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:paddingTop="@dimen/layout_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_farm_pic"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/img_pading"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_pop_farm_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_padding"
+                    android:text=""
+                    android:singleLine="true"
+                    android:textColor="@color/bt_red"
+                    android:textSize="@dimen/text1" />
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_goods_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_padding"
+                        android:textSize="@dimen/text2"
+                        android:text="￥0.0"
+                        android:textColor="@color/bt_red" />
+
+                    <TextView
+                        android:id="@+id/tv_count_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_padding"
+                        android:text="（剩余   只）"
+                        android:textColor="@color/text3"
+                        android:textSize="@dimen/text4" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_cancel_buy"
+                android:layout_width="0dp"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:src="@mipmap/quxiao" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/back_padding"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:text="@string/buy_count"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+
+            <com.slr.slrapp.widget.MyNumberButton
+                android:id="@+id/number_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                qinc:editable="true" />
+
+
+        <TextView
+            android:id="@+id/iv_enure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:background="@drawable/selector_ensure_buy"
+            android:gravity="center"
+            android:padding="@dimen/layout_padding"
+            android:text="确  定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text1" />
+    </LinearLayout>
+
+</LinearLayout>

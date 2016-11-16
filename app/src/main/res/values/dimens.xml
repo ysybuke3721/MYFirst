@@ -1,0 +1,149 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="bottom_btn_padding_top">2dp</dimen>
+
+    <dimen name="first_title_height">50dp</dimen>
+    <!--首页，地图页面标题文字大小-->
+    <dimen name="first_title_tv_size">20dp</dimen>
+
+    <dimen name="layout_padding">10dp</dimen>
+    <!--文字距离屏幕的边距-->
+    <dimen name="city_norrow_padding">5dp</dimen>
+    <!--第二页筛选栏高度-->
+    <dimen name="farmer_chose_list_height">40dp</dimen>
+    <!--筛选栏字体大小-->
+    <dimen name="farmer_select_tv_size">16dp</dimen>
+    <!--第二页条目图片的宽高-->
+    <dimen name="img_height">90dp</dimen>
+    <dimen name="img_width">90dp</dimen>
+    <!-- 列表内边距2 -->
+    <dimen name="morePadding">12dp</dimen>
+
+    <!--第二页条目中两个文字之间间隔-->
+    <dimen name="text_padding">5dp</dimen>
+
+    <dimen name="view_margin">8dp</dimen>
+    <dimen name="text_margintop">10dp</dimen>
+    <dimen name="viewpager_height">190dp</dimen>
+    <dimen name="tv_height_under_pager">45dp</dimen>
+    <dimen name="margin_pager_top">190dp</dimen>
+    <dimen name="dot_margin_pager_top">145dp</dimen>
+
+    <!-- 标题栏高度 -->
+    <dimen name="activity_title_height">50dp</dimen>
+    <!-- 标题栏左右按钮宽度 -->
+    <dimen name="activity_title_width_bt">60dp</dimen>
+    <!-- 标题栏标题字体大小 -->
+    <dimen name="activity_title_tv">20dp</dimen>
+    <!-- 标题栏左右字体大小 -->
+    <dimen name="activity_title_bt">18dp</dimen>
+    <!-- 按钮边角弧度 -->
+    <dimen name="corners_radius">6dp</dimen>
+    <!-- 我的详情的高度 -->
+    <dimen name="my_info">200dp</dimen>
+    <!-- 我的头像大小 -->
+    <dimen name="my_face">80dp</dimen>
+    <!-- 列表内边距 -->
+    <dimen name="padding">10dp</dimen>
+    <!-- 我的列表高度 -->
+    <dimen name="row_height">50dp</dimen>
+    <!-- 我的列表据顶高度 -->
+    <dimen name="row_top">5dp</dimen>
+    <!-- 分割线宽度 -->
+    <dimen name="row_margin">1dp</dimen>
+    <!-- 列表分隔高度 -->
+    <dimen name="dividerHeight">2dp</dimen>
+    <!-- 养殖场logo大小 -->
+    <dimen name="farm_icon">20dp</dimen>
+    <!-- 字体1号 -->
+    <dimen name="text1">18dp</dimen>
+    <!-- 字体2号 -->
+    <dimen name="text2">16dp</dimen>
+    <!-- 字体3号 -->
+    <dimen name="text3">13dp</dimen>
+    <!-- 字体4号 -->
+    <dimen name="text4">12dp</dimen>
+    <!-- 字体5号 -->
+    <dimen name="text5">10dp</dimen>
+    <!-- 字体距左间距1 -->
+    <dimen name="text_left1">4dp</dimen>
+    <!-- 字体距左间距2 -->
+    <dimen name="text_left2">6dp</dimen>
+    <dimen name="edittext_width">170dp</dimen>
+    <dimen name="margin_right">20dp</dimen>
+    <dimen name="dots_to_right">15dp</dimen>
+    <!--搜索页gridview距离线的距离-->
+    <dimen name="margin_line">5dp</dimen>
+    <!--搜索页条目的margin值-->
+    <dimen name="item_margin">4dp</dimen>
+    <!--搜索页面gridview的高度-->
+    <dimen name="search_gritview_height">200dp</dimen>
+    <dimen name="drawable_pading">3dp</dimen>
+    <dimen name="text_pading_img">5dp</dimen>
+    <!--返回按钮距离屏幕边距-->
+    <dimen name="back_padding">15dp</dimen>
+
+    <dimen name="selector_2_item_height">30dp</dimen>
+
+    <!-- 列表内边距 -->
+    <dimen name="marginTop">20dp</dimen>
+
+    <dimen name="img_pading">30dp</dimen>
+    <dimen name="iv_margin_tv">30dp</dimen>
+
+    <!--时间过滤器的数值-->
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+
+
+    <!--时间选择器的-->
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">20sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
+    <!-- 选项文字大小 需要配合 bools.xml 的 pickerview_customTextSize 为 true 才有效果-->
+    <dimen name="pickerview_textsize">20sp</dimen>
+    <dimen name="btn_margin_on_down">8dp</dimen>
+    <dimen name="btn_margin_r_l">40dp</dimen>
+
+    <!--支付成功页面-->
+    <dimen name="tv_in_iv_margin_top">2dp</dimen>
+    <dimen name="img_margin_title">40dp</dimen>
+    <dimen name="back_martin_top_img">30dp</dimen>
+
+    <!--总支付金额距离顶部距离-->
+    <dimen name="tv_pay_margin_top">3dp</dimen>
+    <dimen name="rl_margin_ll">40dp</dimen>
+    <dimen name="dl_line_margin_top">3dp</dimen>
+
+
+    <dimen name="et_margin_et">30dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="padding30">30dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="drawable_padding">5dp</dimen>
+
+
+    <!--微信支付用-->
+    <dimen name="LargeTextSize">16dp</dimen>
+    <dimen name="BasicTextSize">15dp</dimen>
+    <dimen name="TitleTextSize">18dp</dimen>
+    <dimen name="SmallTextSize">14dp</dimen>
+    <dimen name="SmallerTextSize">13dp</dimen>
+    <dimen name="LargestTextSize">30dp</dimen>
+    <dimen name="ChattingTextSize">16dp</dimen>
+    <dimen name="ChattingContentMinHeight">49dp</dimen>
+    <dimen name="PreferenceItemHeight">42dp</dimen>
+    <dimen name="ConversationItemHeight">58dp</dimen>
+    <dimen name="LargeAvatarSize">56dp</dimen>
+
+</resources>

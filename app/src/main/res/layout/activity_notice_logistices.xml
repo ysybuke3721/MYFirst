@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include layout="@layout/layout_titlebar"/>
+
+    <com.slr.slrapp.widget.PullToRefreshLayout
+        android:id="@+id/notice_logistices_ptr"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.slr.slrapp.widget.PullableListView
+            android:id="@+id/notice_logistices_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/background"
+            android:dividerHeight="10dp" />
+
+        <include layout="@layout/load_more" />
+
+    </com.slr.slrapp.widget.PullToRefreshLayout>
+
+</LinearLayout>

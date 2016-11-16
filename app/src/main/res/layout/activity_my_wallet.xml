@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/layout_titlebar"/>
+
+    <RelativeLayout
+        android:background="@color/color4"
+        android:layout_marginTop="@dimen/row_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text2"
+            android:text="我的余额"
+            android:textSize="@dimen/text3"
+            android:id="@+id/my_wallet_tv"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/row_top"
+            android:layout_below="@id/my_wallet_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bt_red"
+            android:text="¥0.00"
+            android:textSize="30dp"
+            android:id="@+id/my_wallet_money"/>
+
+        <Button
+            android:text="提现"
+            android:textColor="@color/color4"
+            android:textSize="@dimen/text1"
+            android:layout_marginTop="@dimen/row_top"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/my_wallet_money"
+            android:background="@drawable/shape_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:id="@+id/my_wallet_getmoney_bt"/>
+        <TextView
+            android:id="@+id/my_wallet_getmoney_tv"
+            android:layout_marginTop="@dimen/row_top"
+            android:layout_below="@+id/my_wallet_getmoney_bt"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text3"
+            android:text="提现时间：每月28号"
+            android:textSize="@dimen/text4"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingBottom="@dimen/row_top"
+        android:paddingTop="@dimen/row_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收支明细"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2"/>
+
+        <TextView
+            android:id="@+id/my_wallet_time_select"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间选择"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2"/>
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/my_wallet_null_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color4">
+
+            <ImageView
+                android:id="@+id/my_wallet_null"
+                android:layout_marginTop="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_wallet_null"/>
+
+            <TextView
+                android:layout_below="@id/my_wallet_null"
+                android:layout_marginTop="@dimen/marginTop"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/text2"
+                android:textColor="@color/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无收支明细"/>
+
+        </RelativeLayout>
+
+
+        <com.slr.slrapp.widget.PullToRefreshLayout
+            android:id="@+id/my_wallet_refresh_view"
+            android:background="@color/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+            <!-- 支持所有实现Pullable接口的View -->
+
+            <com.slr.slrapp.widget.PullableListView
+                android:id="@+id/my_wallet_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@color/line"
+                android:dividerHeight="1dp" />
+
+            <include layout="@layout/load_more" />
+
+
+
+        </com.slr.slrapp.widget.PullToRefreshLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

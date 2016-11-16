@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@mipmap/order_line" />
+
+    <TextView
+        android:paddingLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/item_orderdetail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收货人：某某某  111111111"
+        android:textColor="@color/text1"
+        android:textSize="@dimen/text2" />
+
+    <TextView
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/dingwei"
+        android:layout_margin="@dimen/padding"
+        android:id="@+id/item_orderdetail_adress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:text="请填写收货地址"
+        android:textColor="@color/text1"
+        android:textSize="@dimen/text2"
+        android:layout_marginBottom="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@mipmap/order_line" />
+
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_item_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:orientation="horizontal"
+        android:padding="@dimen/layout_padding">
+
+        <ImageView
+            android:id="@+id/iv_farm_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/category_duck" />
+
+        <TextView
+            android:id="@+id/tv_farm_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/layout_padding"
+            android:text="**养殖厂"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+    </LinearLayout>
+
+
+    <com.slr.slrapp.widget.MyDoubleListview
+        android:id="@+id/ll_item_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></com.slr.slrapp.widget.MyDoubleListview>
+
+
+<LinearLayout
+    android:id="@+id/ll_item_foot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginRight="@dimen/layout_padding"
+        android:alpha="0.3"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/rl_delivery_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/tv_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/devliver_style"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+        <ImageView
+            android:id="@+id/iv_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:src="@mipmap/jinru" />
+
+        <TextView
+            android:id="@+id/tv_delivery_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:layout_toLeftOf="@id/iv_go"
+            android:text="@string/word_deliver"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginRight="@dimen/layout_padding"
+        android:alpha="0.3"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/rl_receive_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/tv_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receive_time"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+        <ImageView
+            android:id="@+id/iv_go_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:src="@mipmap/jinru" />
+
+        <TextView
+            android:id="@+id/tv_receive_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:layout_toLeftOf="@id/iv_go_1"
+            android:text="必填的哦"
+            android:textColor="@color/text3"
+            android:textSize="@dimen/text2" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginRight="@dimen/layout_padding"
+        android:alpha="0.3"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/tv_pay_how"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_style"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+        <ImageView
+            android:id="@+id/iv_go_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:src="@mipmap/jinru" />
+
+        <TextView
+            android:id="@+id/tv_pay_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:layout_toLeftOf="@id/iv_go_2"
+            android:text="在线支付"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginRight="@dimen/layout_padding"
+        android:alpha="0.3"
+        android:background="@android:color/darker_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/tv_total_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_goods_prices"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+        <TextView
+            android:id="@+id/tv_all_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="￥0.0"
+            android:textColor="@color/bt_red"
+            android:textSize="@dimen/text2" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/layout_padding"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginRight="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/tv_yun_fei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yun_fei"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+        <TextView
+            android:id="@+id/tv_yunfei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="+￥0.00"
+            android:textColor="@color/bt_red"
+            android:textSize="@dimen/text2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginRight="@dimen/layout_padding"
+        android:alpha="0.3"
+        android:background="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/et_leave_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_padding"
+        android:background="@drawable/edit_message_bg"
+        android:gravity="center_vertical"
+        android:hint="@string/leave_message"
+        android:textSize="@dimen/text3" />
+</LinearLayout>
+</LinearLayout>
+

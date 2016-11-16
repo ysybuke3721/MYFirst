@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.slr.slrapp.activitys.GoToCommentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_title_height"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/back_padding"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/i_will_comment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text1"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/layout_padding"
+            android:text="@string/tv_publish"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text2" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_commend_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/img_margin_title"
+                android:src="@mipmap/appraise_success" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="评价成功"
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_commend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/layout_padding"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_commend"
+                style="?android:attr/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/shape_commend_et"
+                android:gravity="top"
+                android:hint="请在此填您对此次服务的评价，如您有什么问题，请拨打商务热线0371-5522-7158"
+                android:lineSpacingExtra="@dimen/margin_line"
+                android:lines="4"
+                android:paddingLeft="@dimen/layout_padding"
+                android:paddingRight="@dimen/layout_padding"
+                android:paddingTop="@dimen/layout_padding"
+                android:textSize="@dimen/text1" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_no_name_commend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_padding"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_no_name_commend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/assess_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/layout_padding"
+                    android:text="匿名评价"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text1"
+                    android:textSize="@dimen/text1" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_marginLeft="@dimen/layout_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/img_margin_title">
+<!--
+                <TableRow  android:layout_marginBottom="@dimen/dots_to_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="肉质:     "
+                        android:textColor="@color/text1"
+                        android:textSize="@dimen/text1" />
+
+                    <RatingBar
+                        android:id="@+id/rb_meat"
+                        android:layout_marginLeft="@dimen/layout_padding"
+                        style="@style/CommendRatingBarBig"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:max="5"
+                        android:rating="2"
+                        android:stepSize="1" />
+                </TableRow>
+-->
+                <TableRow  android:layout_marginBottom="@dimen/dots_to_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="产品评价:"
+                        android:textColor="@color/text1"
+                        android:textSize="@dimen/text1" />
+
+                    <RatingBar
+                        android:id="@+id/rb_describe"
+                        android:layout_marginLeft="@dimen/layout_padding"
+                        style="@style/CommendRatingBarBig"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:max="5"
+                        android:rating="5"
+                        android:stepSize="1" />
+                </TableRow>
+
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="物流服务:"
+                        android:textColor="@color/text1"
+                        android:textSize="@dimen/text1" />
+
+                    <RatingBar
+                        android:id="@+id/rb_deliver"
+                        android:layout_marginLeft="@dimen/layout_padding"
+                        style="@style/CommendRatingBarBig"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:max="5"
+                        android:rating="5"
+                        android:stepSize="1" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

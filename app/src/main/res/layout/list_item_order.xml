@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color4"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_margin"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/row_top"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingTop="@dimen/row_top">
+
+        <TextView
+            android:id="@+id/item_order_fram_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*****养殖场"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text3" />
+
+        <TextView
+            android:id="@+id/item_order_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="交易成功"
+            android:textColor="@color/bt_red"
+            android:textSize="@dimen/text3" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_margin"
+        android:background="@color/line" />
+
+    <FrameLayout
+        android:id="@+id/list_item_order_fl"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <HorizontalScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scrollbars="none">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/list_item_order_rl2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/row_top"
+            android:paddingRight="@dimen/padding"
+            android:paddingTop="@dimen/row_top">
+
+
+        </LinearLayout>
+
+        </HorizontalScrollView>
+        <RelativeLayout
+            android:id="@+id/list_item_order_rl1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/row_top"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingTop="@dimen/row_top">
+
+            <ImageView
+                android:id="@+id/item_order_product_icon"
+                android:layout_width="@dimen/my_face"
+                android:layout_height="@dimen/my_face"
+                android:scaleType="fitXY"
+                android:background="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/item_order_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_left2"
+                android:layout_marginTop="@dimen/padding"
+                android:layout_toRightOf="@+id/item_order_product_icon"
+                android:text="原生态土鸡蛋"
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text2" />
+
+            <TextView
+                android:id="@+id/item_order_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/padding"
+                android:text="¥150.00"
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text2" />
+
+
+            <TextView
+                android:id="@+id/item_order_product_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/item_order_product_price"
+                android:layout_marginTop="@dimen/padding"
+                android:text="x1"
+                android:textColor="@color/text1"
+                android:textSize="@dimen/text2" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_margin"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/row_top"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingTop="@dimen/row_top">
+
+        <TextView
+            android:id="@+id/item_order_order_bz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/padding"
+            android:text="共1件商品 合计：¥150.00（含运费¥0.00）"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text3" />
+
+        <Button
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:id="@+id/item_order_bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_order_order_bz"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/shape_bt2"
+            android:text="确认收货"
+            android:textColor="@color/color4"
+            android:textSize="@dimen/text2" />
+
+        <Button
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:id="@+id/item_order_bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/item_order_order_bz"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_toLeftOf="@id/item_order_bt1"
+            android:background="@drawable/shape_bt1"
+            android:text="查看详情"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_margin"
+        android:background="@color/line" />
+
+</LinearLayout>

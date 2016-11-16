@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/layout_padding"
+    android:layout_marginRight="@dimen/layout_padding"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:padding="@dimen/text_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_user_head"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/layout_padding"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+             />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_toRightOf="@+id/iv_user_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/layout_padding"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/iv_user_degree"
+            android:layout_toRightOf="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/layout_padding"
+            android:scaleType="fitXY"
+             />
+
+        <TextView
+            android:id="@+id/tv_discuss_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/layout_padding"
+            android:text=""
+            android:textColor="@color/text3"
+            android:textSize="@dimen/text3" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_user_comment"
+        android:text="　　  "
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:layout_width="match_parent"
+        android:ellipsize="end"
+        android:textColor="@color/text2"
+        android:textSize="@dimen/text3"
+        android:paddingBottom="@dimen/text_padding"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 实心颜色 -->
+    <solid android:color="@color/bt_red"/>
+    <!-- 边角度数 -->
+    <corners android:radius="@dimen/corners_radius" />
+    <!-- 描边
+    <stroke android:width="@dimen/row_margin"
+        android:color="@color/gray"/>
+        -->
+
+</shape>

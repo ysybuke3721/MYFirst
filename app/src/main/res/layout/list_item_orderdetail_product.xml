@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/row_top"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingTop="@dimen/row_top">
+
+        <ImageView
+            android:id="@+id/item_orderdetail_product_icon"
+            android:layout_width="@dimen/my_face"
+            android:layout_height="@dimen/my_face"
+            android:scaleType="fitXY"
+            android:background="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/item_orderdetail_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_left2"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_toRightOf="@+id/item_orderdetail_product_icon"
+            android:text="原生态土鸡蛋"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2" />
+
+        <TextView
+            android:id="@+id/item_orderdetail_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/padding"
+            android:text="¥150.00"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2" />
+
+
+        <TextView
+            android:layout_marginLeft="@dimen/text_left2"
+            android:id="@+id/item_orderdetail_product_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_orderdetail_product_icon"
+            android:layout_below="@id/item_orderdetail_product_name"
+            android:layout_marginTop="@dimen/padding"
+            android:text="x1"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text2" />
+
+        <Button
+
+            android:id="@+id/item_orderdetail_bt"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/item_orderdetail_product_price"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_toLeftOf="@id/item_order_bt1"
+            android:background="@drawable/shape_bt1"
+            android:layout_alignParentRight="true"
+            android:text="退单"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/line" />
+
+</LinearLayout>

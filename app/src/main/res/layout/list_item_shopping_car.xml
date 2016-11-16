@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:qinc="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_shopping_car_product"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color4"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/layout_padding"
+    android:layout_marginBottom="@dimen/layout_padding"
+    android:paddingBottom="@dimen/padding"
+    android:paddingTop="@dimen/padding">
+
+    <CheckBox
+        android:id="@+id/product_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_chose_to_pay" />
+
+
+    <ImageView
+        android:id="@+id/item_shopping_car_icon"
+        android:layout_width="@dimen/my_face"
+        android:layout_height="@dimen/my_face"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_shopping_car_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_left2"
+            android:text=""
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text1" />
+
+        <TextView
+            android:id="@+id/item_shopping_car_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/text_left2"
+            android:layout_marginTop="@dimen/margin_line"
+            android:text=""
+            android:textColor="@color/golden"
+            android:textSize="@dimen/text4" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.slr.slrapp.widget.MyNumberButton
+                android:id="@+id/number_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                qinc:editable="true" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/rl_margin_ll">
+
+        <TextView
+            android:id="@+id/item_shopping_car_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="¥0.00"
+            android:textColor="@color/bt_red"
+            android:textSize="@dimen/text2" />
+
+        <ImageView
+            android:id="@+id/iv_trash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_shopping_car_price"
+            android:padding="@dimen/layout_padding"
+            android:src="@mipmap/trash" />
+    </RelativeLayout>
+
+</LinearLayout>

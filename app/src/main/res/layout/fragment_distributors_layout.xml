@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_distributors_rl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_distributors_time"
+            android:text="时间选择"
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2"/>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_distributors_total"
+            android:text="合计：¥4000"
+            android:textColor="@color/bt_red"
+            android:textSize="@dimen/text1"/>
+
+    </RelativeLayout>
+
+    <com.slr.slrapp.widget.PullToRefreshLayout
+        android:layout_above="@id/my_distributors_rl"
+        android:id="@+id/distributors_refresh_view"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+        <!-- 支持所有实现Pullable接口的View -->
+
+        <com.slr.slrapp.widget.PullableListView
+            android:id="@+id/distributors_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/background"
+            android:dividerHeight="1dp" />
+
+        <include layout="@layout/load_more" />
+
+
+
+    </com.slr.slrapp.widget.PullToRefreshLayout>
+
+</RelativeLayout>

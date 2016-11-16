@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.slr.slrapp.activitys.BaiDuLocationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/first_title_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/back_padding"
+            android:src="@mipmap/back_map" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/map_title"
+            android:textSize="@dimen/first_title_tv_size"
+            android:textStyle="bold"
+
+            />
+
+        <!--
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dots_to_right"
+            android:src="@mipmap/search_map" />
+            -->
+    </LinearLayout>
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <LinearLayout
+        android:id="@+id/ll_farm_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/tv_area_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_padding"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:text=""
+            android:textColor="@color/text1"
+            android:textSize="@dimen/text1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_area_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+
+        <TextView
+            android:id="@+id/tv_area_jianjie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:text=""
+            android:textColor="@color/text2"
+            android:textSize="@dimen/text2" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
